@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Personal</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/barra.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/skill.css">
+    <link rel="stylesheet" href="css/experiences.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script defer src="js/js.js"></script>
+</head>
+<body>
+    <header class="topheader">
+            <nav class="topnav">
+                <a href="#" class="logo">
+                <img src="img/castillo-azul-del-icono.webp" alt="Logo pagina">
+                <div>William Castillo</div>
+                </a>
+                <button class="open-menu" aria-label="Abrir Menú">
+                <img src="img/barras.svg" alt="Abrir Menú">    
+                </button>
+                <ul class="menu">
+                    <button class="close-menu" aria-label="Cerrar Menú">
+                        
+                        <img src="img/cerrar.svg" alt="Cerrar Menú">
+                    </button>
+                    <li><a href="#profile">Perfil</a></li>
+                    <li><a href="#experience">Experiencia</a></li>
+                    <li><a href="#skill">Habilidades</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+    </header>  
+    <div class="horizontal-padding vertical-padding" id="profile">
+        <section class="profile" >
+            <div class="profile-info">
+                <h1 class="profile-title">Hola, Soy William Castillo</h1>
+                <p class="profile-details">
+                    Ingeniero de Sistemas con manejo de bases de datos relacionales, experiencia en soporte y desarrollo de software y apasionado por la tecnología.
+                    <p>
+                        <a class="profile-btn" href="doc/HV.pdf" download>Descargar CV</a>  
+                    </p>
+            </div>
+            <span class="profile-img-section">
+                <img class="profile-img" src="img/foto.jpg" alt="foto">
+                <div class="profile-img-line"></div>
+            </span>
+        </section>
+    </div>
+    <section class="experiences" >
+        <img src="img/wave.svg" alt="división" class="wave" id="experience">
+        <div class="experiences-body">
+            <h2 class="experiences-title">Experiencia</h2>
+            <div class="experiences-grid">
+                <div class="empty"></div>
+                <div class="line"></div>
+                <div class="experience">
+                    <div class="experience-date">2021-2022</div>
+                    <div class="experience-company">Sociedad Portuaria de Cartagena</div>
+                    <div class="experience-position">Analista de Soporte Software</div>
+                    <div class="experience-description">Gestión de bases de Datos SQL, pruebas de aplicaciones y soporte aplicaciones software de la organización.</div>
+                </div>
+                <div class="experience experience-left">
+                    <div class="experience-date">2018-2021</div>
+                    <div class="experience-company">Colegio Salesiano</div>
+                    <div class="experience-position">Administrador de Sistemas</div>
+                    <div class="experience-description">Gestión de bases de Datos SQL, gestión de redes cableadas e inalámbricas, elaboración y verificación de copias de seguridad de la información, gestión y soporte de software institucionales y página web y apoyo tecnológico a las diferentes áreas de la institución</div>
+                </div>
+                <div class="line"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="line"></div>
+                <div class="experience">
+                    <div class="experience-date">2015-2017</div>
+                    <div class="experience-company">Centro de Formación de la Cooperación Española de Cartagena de Indias</div>
+                    <div class="experience-position">Gestor de Informática</div>
+                    <div class="experience-description">Gestión de bases de Datos, mantenimiento, montaje y soporte de software, hardware y de Redes de datos, mantenimiento de aplicaciones institucionales, manejo de sistema CCTV y ejecución y revisión de backups</div>
+                </div>
+            </div>
+        </div>
+        <img src="img/wave.svg" alt="división" class="wave wave-bottom">
+    </section>
+
+    <div class="horizontal-padding vertical-padding">
+        <section class="skill" id="skill">
+            <h2 class="skill-title">Habilidades</h2>
+            <ul class="skill-list">
+                <li class="skill-skill">BD relacionales</li>
+                <li class="skill-skill">HTML</li>
+                <li class="skill-skill">CSS</li>
+                <li class="skill-skill">JavaScript</li>
+                <li class="skill-skill">PHP</li>
+            </ul>
+        </section>
+    </div>
+    <div class="horizontal-padding vertical-padding">
+        <section class="contact" id="contact">
+            <h2 class="contact-title">Contacto</h2>
+            <div class="contact-details">
+                <div class="contact-details-group">
+                    <p class="contact-label">Dirección: </p>
+                    <p class="contact-text">Cartagena, Colombia</p>
+                </div>
+                <div class="contact-details-group">
+                    <p class="contact-label">Email:</p>
+                    <p class="contact-text">unomas@hotmail.com</p>
+                </div>
+                <div class="contact-details-group">
+                    <p class="contact-text">Dejé su mensaje y en el menor tiempo posible se le responderá</p>
+                </div>
+            </div>
+            <form class="contact-form">
+                <div class="contact-form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="contact-form-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" required>
+                </div>
+                <div class="contact-form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea name="message" id="message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="contact-form-submit">Enviar</button>
+            </form>
+            <nav class="social">
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="https://www.linkedin.com/in/william-castillo-correa" target="_blank" class="social-link">
+                            <img src="img/linkedin.svg" alt="Perfil Linkedin">
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://github.com/wecc18" target="_blank" class="social-link">
+                            <img src="img/github.svg" alt="Perfil github">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </div>
+</body>
+</html>
