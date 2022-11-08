@@ -10,10 +10,12 @@
     width: 100%;
     position: relative;
     top: 2px;
+    color: var(--color-primario);
 }
 .wave-bottom{
     transform: scaleY(-1);
     top: -2px;
+    color: var(--color-primario);
 }
 .experiences-title{
     text-align: center;

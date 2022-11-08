@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="ligth">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,22 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="img/site.webmanifest">
+    <script>
+    (function(){
+        const userTheme = localStorage.getItem("theme");
+        const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        if(userTheme==="dark" || (!userTheme && darkQuery.matches)){
+            setTheme("dark");
+        }
+        darkQuery.addEventListener("change", function (e){
+            if(!localStorage.getItem("theme"))
+            setTheme(e.matches ? "dark":"light")
+        });
+        function setTheme(newTheme){
+            document.documentElement.setAttribute("data-theme", newTheme);
+        }
+    })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -19,17 +35,15 @@
     <link rel="stylesheet" href="css/experiences.css">
     <link rel="stylesheet" href="css/contact.css">
     <script defer src="js/js.js"></script>
+    <script defer src="js/color.js"></script>
 </head>
 <body>
     <header class="topheader">
             <nav class="topnav">
                 <a href="#" class="logo">
-                <img src="img/castillo-azul-del-icono.webp" alt="Logo pagina">
+                <img src="img/logo.png" alt="Logo pagina">
                 <div>William Castillo</div>
                 </a>
-                <button class="open-menu" aria-label="Abrir Menú">
-                <img src="img/barras.svg" alt="Abrir Menú">    
-                </button>
                 <ul class="menu">
                     <button class="close-menu" aria-label="Cerrar Menú">
                         
@@ -40,6 +54,20 @@
                     <li><a href="#skill">Habilidades</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
+                <button class="light-mode-btn" aria-label="Activar Modo Claro">
+                    <img src="img/sun.svg" alt="">
+                </button>
+                <button class="dark-mode-btn" aria-label="Activar Modo Oscuro">
+                    <img src="img/moon.svg" alt="">
+                </button>
+                <button class="open-menu" aria-label="Abrir Menú">
+                <!--<img src="img/barras.svg" alt="Abrir Menú">  -->
+                <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 14.5H27" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 2H27" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 27H27" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>  
+                </button>
             </nav>
     </header>  
     <div class="horizontal-padding vertical-padding" id="profile">
@@ -53,14 +81,15 @@
                     </p>
             </div>
             <span class="profile-img-section">
-                <img class="profile-img" src="img/foto.jpg" alt="foto">
+                <img class="profile-img" src="img/foto-sin-fondo.png" alt="foto">
                 <div class="profile-img-line"></div>
             </span>
         </section>
     </div>
     <section class="experiences" >
-        <img src="img/wave.svg" alt="división" class="wave" id="experience">
-        <div class="experiences-body">
+        <!--<img src="img/wave.svg" alt="división" class="wave" id="experience">-->
+        <svg id="svg" class="wave" viewBox="0 0 1440 500" xmlns="http://www.w3.org/2000/svg" ><path d="M 0,500 C 0,500 0,250 0,250 C 101.35714285714286,290.8571428571429 202.71428571428572,331.7142857142857 327,343 C 451.2857142857143,354.2857142857143 598.4999999999999,336 714,299 C 829.5000000000001,262 913.2857142857142,206.28571428571428 1029,195 C 1144.7142857142858,183.71428571428572 1292.357142857143,216.85714285714286 1440,250 C 1440,250 1440,500 1440,500 Z" stroke="none" stroke-width="0" fill="currentColor" fill-opacity="1" ></path></svg>
+        <div class="experiences-body" id="experience">
             <h2 class="experiences-title">Experiencia</h2>
             <div class="experiences-grid">
                 <div class="empty"></div>
@@ -89,7 +118,8 @@
                 </div>
             </div>
         </div>
-        <img src="img/wave.svg" alt="división" class="wave wave-bottom">
+        <!--<img src="img/wave.svg" alt="división" class="wave wave-bottom">-->
+        <svg id="svg" class="wave wave-bottom" viewBox="0 0 1440 500" xmlns="http://www.w3.org/2000/svg" ><path d="M 0,500 C 0,500 0,250 0,250 C 101.35714285714286,290.8571428571429 202.71428571428572,331.7142857142857 327,343 C 451.2857142857143,354.2857142857143 598.4999999999999,336 714,299 C 829.5000000000001,262 913.2857142857142,206.28571428571428 1029,195 C 1144.7142857142858,183.71428571428572 1292.357142857143,216.85714285714286 1440,250 C 1440,250 1440,500 1440,500 Z" stroke="none" stroke-width="0" fill="currentColor" fill-opacity="1" ></path></svg>
     </section>
 
     <div class="horizontal-padding vertical-padding">
